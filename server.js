@@ -8,6 +8,8 @@ const PORT = process.env.PORT || 3000;
 const POSTS_DIR = path.join(__dirname, 'posts');
 
 app.use(express.static('public'));
+app.use('/assets', express.static('assets'));
+
 
 app.get('/api/posts', (req, res) => {
   const files = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'));

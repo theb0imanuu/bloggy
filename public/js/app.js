@@ -76,7 +76,7 @@ function renderNotFound() {
 function renderContact() {
   const container = document.getElementById('app');
   container.innerHTML = `
-    <section class="contact">
+    <section class="contact container">
       <h2>Contact Me</h2>
       <p>Have questions, feedback, or just want to say hi? Fill out the form below!</p>
       <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
@@ -94,6 +94,24 @@ function renderContact() {
         </label>
         <button type="submit" class="btn">Send Message</button>
       </form>
+
+      <div class="contact-links">
+        <h3>Or reach me directly:</h3>
+        <ul>
+          <li>
+            <img src="/assets/icons/email.svg" alt="Email icon" class="icon" />
+            <a href="mailto:emmwaniki2004@gmail.com">Mail</a>
+          </li>
+          <li>
+            <img src="/assets/icons/linkedin.svg" alt="LinkedIn icon" class="icon" />
+            <a href="https://www.linkedin.com/in/emmanuel-mwaniki" target="_blank">LinkedIn</a>
+          </li>
+          <li>
+            <img src="/assets/icons/github.svg" alt="GitHub icon" class="icon" />
+            <a href="https://github.com/theb0imanuu" target="_blank">GitHub</a>
+          </li>
+        </ul>
+      </div>
     </section>
   `;
 }

@@ -176,3 +176,36 @@ nav a:hover {
 .contact-form button:hover {
   background-color: var(--color-primary-dark);
 }
+
+.contact-links {
+  margin-top: 2rem;
+}
+.contact-links ul {
+  list-style: none;
+  padding: 0;
+}
+.contact-links li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.contact-links .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.75rem;
+  fill: var(--color-primary);
+}
+.contact-links a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.contact-links a:hover {
+  text-decoration: underline;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  fill: var(--color-primary);
+}
