@@ -6,6 +6,8 @@ function handleRouteChange() {
     renderPost(slug);
   } else if (hash === '#archive') {
     renderArchive();
+  } else if (hash === '#contact') {
+    renderContact();
   } else {
     renderHome();
   }

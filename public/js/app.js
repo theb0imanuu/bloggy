@@ -72,3 +72,28 @@ async function renderPost(slug) {
 function renderNotFound() {
   document.getElementById('app').innerHTML = "<p>Post not found.</p>";
 }
+
+function renderContact() {
+  const container = document.getElementById('app');
+  container.innerHTML = `
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <p>Have questions, feedback, or just want to say hi? Fill out the form below!</p>
+      <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="_replyto" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  `;
+}
