@@ -83,7 +83,7 @@ nav a:hover {
   background: var(--color-accent);
 }
 
-/* Featured and Archive */
+/* Featured and Archive Sections */
 .featured,
 .archive {
   padding: 2rem;
@@ -95,19 +95,42 @@ nav a:hover {
   gap: 1rem;
 }
 
+/* Updated Archive Grid: 4x4 */
+.archive .posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Post card & item styles */
 .post-card,
 .post-item {
   border: 1px solid var(--color-card-border);
   padding: 1rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s;
   background-color: var(--color-bg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeInUp 0.4s ease forwards;
+  opacity: 0;
 }
 
 .post-card:hover,
 .post-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Post Page */
@@ -133,6 +156,14 @@ nav a:hover {
   padding: 2rem;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  align-items: middle;
+  fill: var(--color-primary);
 }
 
 .contact h2 {
@@ -180,32 +211,48 @@ nav a:hover {
 .contact-links {
   margin-top: 2rem;
 }
+
 .contact-links ul {
   list-style: none;
   padding: 0;
 }
+
 .contact-links li {
   display: flex;
   align-items: center;
   margin-bottom: 0.75rem;
 }
+
 .contact-links .icon {
   width: 24px;
   height: 24px;
   margin-right: 0.75rem;
   fill: var(--color-primary);
 }
+
 .contact-links a {
   color: var(--color-primary);
   text-decoration: none;
 }
+
 .contact-links a:hover {
   text-decoration: underline;
 }
-.icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 0.5rem;
-  vertical-align: middle;
-  fill: var(--color-primary);
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.pagination span {
+  font-weight: bold;
 }

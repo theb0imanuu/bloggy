@@ -4,7 +4,7 @@ function handleRouteChange() {
   if (hash.startsWith('#post/')) {
     const slug = hash.split('/')[1];
     renderPost(slug);
-  } else if (hash === '#archive') {
+  } else if (hash.startsWith('#archive')) {
     renderArchive();
   } else if (hash === '#contact') {
     renderContact();
